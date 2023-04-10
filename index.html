@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error throw keyword</title>
+</head>
+<body>
+    <p>Enter a number between 5 to 10</p>
+    <input type="text" id="input-btn">
+    <button id="check-Btn">check</button>
+
+    <script>
+        document.getElementById("check-Btn").addEventListener("click", function(){
+            let number = document.getElementById("input-btn").value
+            try {
+                if (number < 5){
+                    throw "Number is too low";
+                }else if(number >10){
+                    throw "Number is too high";
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        });
+    </script>
+</body>
+</html>
